@@ -26,8 +26,6 @@ SECRET_KEY = 'django-insecure-bz389=kb00c-_8@8u44oc#0)=870fzb5$qjniijo(qd^bjf1+0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -87,11 +85,9 @@ DATABASES = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Allow React frontend
+    "http://198.68.100.5:5173",
 ]
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173",
-]
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 ALLOWED_HOSTS = ['*']

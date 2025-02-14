@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import {IP_ADDRESS} from '../config';
 
 interface AuthContextType {
   isAuthenticated: boolean;
@@ -23,7 +24,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = async (username: string, password: string) => {
     try {
-      const res = await axios.post('http://172.31.112.248:8000/api/token/', {
+      const res = await axios.post(`http://${IP_ADDRESS}:8000/api/token/`, {
         username,
         password,
       });
@@ -37,7 +38,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const signup = async (username: string, email: string, password: string) => {
     try {
-      await axios.post('http://172.31.112.248:8000/api/register/', {
+      await axios.post(`http://${IP_ADDRESS}:8000/api/register/`, {
         username,
         email,
         password,

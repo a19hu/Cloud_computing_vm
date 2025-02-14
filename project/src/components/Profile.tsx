@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 import { LogOut, Mail, User } from 'lucide-react';
-
+import {IP_ADDRESS} from '../config';
 interface UserProfile {
   username: string;
   email: string;
@@ -17,7 +17,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get('http://localhost:8000/api/profile/', {
+        const res = await axios.get(`http://${IP_ADDRESS}:8000/api/profile/`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('access_token')}`
           }
@@ -51,7 +51,7 @@ const Profile = () => {
           <div className="px-4 py-5 sm:px-6 bg-gradient-to-r from-blue-500 to-purple-600">
             <h3 className="text-lg leading-6 font-medium text-white">Profile Information</h3>
           </div>
-          
+
           <div className="px-4 py-5 sm:p-6">
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
