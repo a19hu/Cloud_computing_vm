@@ -26,7 +26,6 @@ cd Cloud_computing_vm/project/
 Update the <a href="https://github.com/a19hu/Cloud_computing_vm/blob/master/project/src/config.tsx">config.tsx</a> file to replace the backend IP address with `198.68.100.4` (VM2's IP address).
 
 
-<img src="image.png"></img>
 
 ### 2.3 Install Dependencies and Run Frontend
 ```bash
@@ -57,6 +56,7 @@ pip install -r requirements.txt
 
 ### 3.3 Configure IP Address
 Update the <a href="https://github.com/a19hu/Cloud_computing_vm/blob/master/myproject/myproject/settings.py">setting.py</a> file to replace the frontend IP address with `198.68.100.5` (VM1's IP address).
+<img src="image.png"></img>
 
 ### 3.4 Run the Django Backend
 ```bash
